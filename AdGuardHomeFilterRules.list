@@ -76,7 +76,6 @@
 ||i.ytimg.com^$important^
 # 百家号
 ||baijiahao.baidu.com^
-@@||bilibili.com^$important
 @@||apisoft.df0535.com^$important
 @@||videocloud.cn-hangzhou.log.aliyuncs.com^$important
 @@||fonts.gstatic.com^$important
@@ -266,10 +265,8 @@
 @@||cm.jd.com^$important
 @@||s.deepl.com^$important
 @@||360.cn^$important
-@@||www.bilibili.com^$important
 @@||wgo.mmstat.com^$important
 @@||app-monitor.ele.me^$important
-@@||hdslb.com
 ||o1098464.ingest.sentry.io^$important
 #@@||ainu.intel.cn^$important
 ||normalplayer.top^$important
@@ -295,7 +292,3 @@
 ||netflixdnstest7.com^$dnstype=AAAA
 ||netflixdnstest8.com^$dnstype=AAAA
 ||netflixdnstest9.com^$dnstype=AAAA
-# Hosts
-10.10.10.1 miwifi.com
-61.128.142.215 registry.npmmirror.com
-125.73.210.102 cdn.npmmirror.com
