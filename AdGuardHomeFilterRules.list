@@ -292,3 +292,13 @@
 ||netflixdnstest7.com^$dnstype=AAAA
 ||netflixdnstest8.com^$dnstype=AAAA
 ||netflixdnstest9.com^$dnstype=AAAA
+@@||www.cool18.com^$important
+@@||wap.cool18.com^$important
+@@||collector.github.com^$important
+@@||www.clarity.ms^$important
+@@||fpt.microsoft.com^$important
+@@||v.clarity.ms^$important
+@@||browser.pipe.aria.microsoft.com^$important
+@@||mesu.apple.com^$important
+@@||xp.apple.com^$important
+@@||gdmf.apple.com^$important
