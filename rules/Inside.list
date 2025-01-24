@@ -6,7 +6,7 @@ DOMAIN-SUFFIX,vgod.uk
 DOMAIN-SUFFIX,booom.uk
 DOMAIN-SUFFIX,ip.3322.net
 DOMAIN-SUFFIX,dogfight360.com
-#微软连通性测试
+# 微软连通性测试
 DOMAIN,www.msftconnecttest.com
 # NARK认证中心
 DOMAIN-SUFFIX,nnnolanark.xyz
@@ -47,7 +47,7 @@ DOMAIN-SUFFIX,rcp.net
 DOMAIN-SUFFIX,greencloudvps.com
 DOMAIN-SUFFIX,spartanhost.net
 DOMAIN-SUFFIX,vps.hosting
-#dns-whitelist.txt大陆直连域名  https://github.com/felixonmars/dnsmasq-china-list/blob/master/ns-whitelist.txt
+# dns-whitelist.txt大陆直连域名  https://github.com/felixonmars/dnsmasq-china-list/blob/master/ns-whitelist.txt
 DOMAIN-SUFFIX,.iidns.com
 DOMAIN-SUFFIX,.dnspod.com
 DOMAIN-SUFFIX,.dnspod.net
@@ -164,7 +164,7 @@ DOMAIN-SUFFIX,.huaweicloud-dns.cn
 DOMAIN-SUFFIX,.360anyu.com
 DOMAIN-SUFFIX,.zndns.com
 DOMAIN-SUFFIX,.ppstream.com
-#字节跳动
+# 字节跳动
 DOMAIN-SUFFIX,ecom-lightapp.com
 DOMAIN-SUFFIX,ecombdapi.com
 DOMAIN-SUFFIX,ecombdimg.com
@@ -460,7 +460,7 @@ IP-CIDR6,2001:da8:7006::/47,no-resolve
 IP-CIDR6,240c:ca04::/32,no-resolve
 DOMAIN-SUFFIX,lemonhd.org
 DOMAIN-SUFFIX,zijieurl.cn
-#国内应用进程-安卓
+# 国内应用进程-安卓
 PROCESS-NAME,com.xiaomi.mibrain.speech
 PROCESS-NAME,小米云服务.exe
 PROCESS-NAME,com.taobao.taobao
@@ -600,7 +600,7 @@ PROCESS-NAME,baidunetdiskhost.exe
 PROCESS-NAME,baidunetdiskrender.exe
 PROCESS-NAME,wsctrlsvc.exe
 PROCESS-NAME,cn.edu.nju.iportal
-# Talkatone
+# Talkatone.sgmodule
 DOMAIN-SUFFIX,agkn.com
 DOMAIN-SUFFIX,cohere.com
 DOMAIN-SUFFIX,crashlytics.com
