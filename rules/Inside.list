@@ -577,7 +577,7 @@ PROCESS-NAME,cn.edu.dlut.ws
 PROCESS-NAME,org.apache.cordova.exampleFudan
 PROCESS-NAME,com.cidtech.hefeigongye
 PROCESS-NAME,com.lantu.MobileCampus.sysu
-#自己添加的安卓包名
+# 自己添加的安卓包名
 PROCESS-NAME,com.baidu.netdisk
 PROCESS-NAME,com.smzdm.client.android
 PROCESS-NAME,com.cmi.jegotrip
@@ -588,7 +588,7 @@ PROCESS-NAME,com.autoavi.minimap
 PROCESS-NAME,com.maimemo.android.momo
 PROCESS-NAME,com.ecitic.bank.mobile
 PROCESS-NAME,com.ss.android.ugc.aweme.lite
-#windwos
+# windwos
 PROCESS-NAME,WeChat.exe
 PROCESS-NAME,WeChatAppEx.exe
 PROCESS-NAME,WeChatOCR.exe
@@ -600,3 +600,18 @@ PROCESS-NAME,baidunetdiskhost.exe
 PROCESS-NAME,baidunetdiskrender.exe
 PROCESS-NAME,wsctrlsvc.exe
 PROCESS-NAME,cn.edu.nju.iportal
+# Talkatone
+DOMAIN-SUFFIX,agkn.com
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,inner-active.mobi
+DOMAIN-SUFFIX,ip-api.com
+DOMAIN-SUFFIX,kochava.com
+DOMAIN-SUFFIX,mobilefuse.com
+DOMAIN-SUFFIX,talkatone.com
+IP-CIDR,205.164.56.0/24,no-resolve
+IP-CIDR,216.172.154.0/24,no-resolve
+IP-CIDR,50.117.27.0/24,no-resolve
+IP-CIDR,63.251.124.0/24,no-resolve
+IP-CIDR,69.46.75.0/24,no-resolve
