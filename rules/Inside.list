@@ -615,3 +615,32 @@ IP-CIDR,216.172.154.0/24,no-resolve
 IP-CIDR,50.117.27.0/24,no-resolve
 IP-CIDR,63.251.124.0/24,no-resolve
 IP-CIDR,69.46.75.0/24,no-resolve
+# Epicgames
+DOMAIN-SUFFIX,ol.epicgames.com
+# Getui
+DOMAIN-SUFFIX,dizhensubao.getui.com
+# Google
+DOMAIN,dl.google.com
+DOMAIN-SUFFIX,googletraveladservices.com
+# Mozilla
+DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
+# Origin
+DOMAIN,origin-a.akamaihd.net
+# Tencent
+DOMAIN,fairplay.l.qq.com
+DOMAIN,livew.l.qq.com
+DOMAIN,vd.l.qq.com
+# Umeng
+DOMAIN,errlog.umeng.com
+DOMAIN,msg.umeng.com
+DOMAIN,msg.umengcloud.com
+# Miui 小米
+DOMAIN,tracking.miui.com
+# General
+DOMAIN,app.adjust.com
+DOMAIN,bdtj.tagtic.cn
+# Hypixel Network
+DOMAIN,rewards.hypixel.net
+# Koodo Mobile
+DOMAIN-SUFFIX,koodomobile.com
+DOMAIN-SUFFIX,koodomobile.ca
