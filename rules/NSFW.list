@@ -1,5 +1,7 @@
-# Merged NSFW.list 
+# NAME NSFW.list 
 # Total: 173 Rules
+# 额外规则
+# 合并规则(NSFW)
 DOMAIN-SUFFIX,100606.xyz
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,3movs.com

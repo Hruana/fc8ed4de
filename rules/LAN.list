@@ -1,5 +1,7 @@
 # NAME LAN.list 
 # Total: 35 Rules
+# 额外规则
+# 合并规则(LAN)
 DOMAIN-SUFFIX,acl4.ssr
 DOMAIN-SUFFIX,hiwifi.com
 DOMAIN-SUFFIX,ip6-localhost
