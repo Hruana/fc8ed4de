@@ -1,4 +1,3 @@
-
 # Custom Outside.list
 DOMAIN-SUFFIX,kakadm.cc
 DOMAIN-SUFFIX,moeazusa.app
@@ -1062,3 +1061,7 @@ DOMAIN-SUFFIX,md1.pub
 DOMAIN-SUFFIX,recaptcha.net
 DOMAIN-SUFFIX,wd-purple.com
 DOMAIN-SUFFIX,chkaja.com
+# DNS leak
+DOMAIN-SUFFIX,ipleak.net
+DOMAIN-SUFFIX,browserleaks.com
+DOMAIN-SUFFIX,ipcheck.ing
