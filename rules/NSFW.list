@@ -1,5 +1,5 @@
 # NAME NSFW.list 
-# Total: 197 Rules
+# Total: 199 Rules
 # 额外规则
 DOMAIN-SUFFIX,yavtube.com
 DOMAIN-SUFFIX,javcup.com
@@ -24,6 +24,8 @@ DOMAIN-SUFFIX,nsfw.xxx
 DOMAIN-SUFFIX,9uu.com
 DOMAIN-SUFFIX,pigav.com
 DOMAIN-SUFFIX,tktube.com
+DOMAIN-SUFFIX,8se.me
+DOMAIN-SUFFIX,anidex.info
 DOMAIN-KEYWORD,55comic
 # 合并规则(NSFW)
 DOMAIN-SUFFIX,100606.xyz
