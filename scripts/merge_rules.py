@@ -118,11 +118,13 @@ def merge_nsfw_rules(output_file: str = '../rules/NSFW.list'):
         'DOMAIN-SUFFIX,7mmtv.sx',
         'DOMAIN-SUFFIX,nsfw.xxx',
         'DOMAIN-SUFFIX,9uu.com',
+        'DOMAIN-SUFFIX,russmus.net',
         'DOMAIN-SUFFIX,pigav.com',
         'DOMAIN-SUFFIX,tktube.com',
         'DOMAIN-SUFFIX,8se.me',
         'DOMAIN-SUFFIX,anidex.info',
         'DOMAIN-KEYWORD,55comic',
+        'DOMAIN-KEYWORD,onlyfans',
         '# 合并规则(NSFW)',
     ]
     #
