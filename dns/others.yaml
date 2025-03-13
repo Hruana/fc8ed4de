@@ -16,7 +16,7 @@ geodata-mode: true
 # 源地址 https://github.com/MetaCubeX/meta-rules-dat
 # 可以更换镜像站但不要更换其他数据库，可能导致无法启动
 geox-url:
-  geosite: 'https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/geosite.dat'
+  geosite: 'https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/geosite-all-lite.dat'
   geoip: 'https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/geoip.dat'
   mmdb: 'https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/Country.mmdb'
 
