@@ -1,0 +1,5 @@
+# Custom DNS.list
+DOMAIN,doh.pub
+DOMAIN,dns.alidns.com
+DOMAIN,dns.google
+DOMAIN,cloudflare-dns.com
