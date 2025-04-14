@@ -78,19 +78,6 @@ tls:
     - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
     - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305
 
-#------------------------GEO 配置------------------------#
-geodata-mode: true          # GEO模式：true使用geoip.dat数据库,false使用mmdb数据库
-geo-auto-update: true       # GEO自动更新
-geo-update-interval: 168    # GEO更新间隔(小时)
-# Geo 数据库下载地址
-# 使用 FastGit 代理 (https://fgit.cf)
-# 源地址 https://github.com/MetaCubeX/meta-rules-dat
-# 可以更换镜像站但不要更换其他数据库，可能导致无法启动
-geox-url:
-  geoip: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/geoip-lite.dat"
-  geosite: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/geosite-all-lite.dat"
-  mmdb: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/Country.mmdb"
-
 #------------------------TUN 配置------------------------#
 tun:
   enable: false
@@ -137,7 +124,7 @@ dns:
     "www.msftncsi.com":
       - 119.29.29.29
       - 223.5.5.5
-    geosite:bilibili,cn,private:
+    rule-set:bilibili,cn,private:
       # 国内DNS服务器(可选运营商DNS)
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
