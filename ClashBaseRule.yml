@@ -115,7 +115,7 @@ dns:
   nameserver-policy:
     dns.alidns.com: quic://223.5.5.5:853
     doh.pub: https://1.12.12.12/dns-query
-    "www.msftconnecttest.com": 
+    "www.msftconnecttest.com":
       - 119.29.29.29
       - 223.5.5.5
     "dns.msftncsi.com":
@@ -220,3 +220,53 @@ hosts:
   dns.alidns.com: [223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1]
   dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
   cloudflare-dns.com: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
+
+#-------------------------规则配置------------------------#
+rule-providers:
+  bilibili:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/bilibili.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/bilibili.mrs"
+    interval: 86400
+
+  fakeip-filter:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/fakeip-filter.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"
+    interval: 86400
+
+  cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/cn.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.mrs"
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/private.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.mrs"
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/proxy.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.mrs"
+    interval: 86400
+
+  networktest:
+    type: http
+    behavior: classical
+    format: text
+    path: ./rules/networktest.list
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list"
+    interval: 86400
