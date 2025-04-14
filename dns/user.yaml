@@ -16,7 +16,7 @@ dns:
   fake-ip-filter: ['+.*']
   respect-rules: true
   nameserver-policy:
-    rule-set:bilibili,cn,private:
+    rule-set:bilibili,cn:
       - 推荐运营商dns v4
       - 推荐运营商dns v6
   proxy-server-nameserver:

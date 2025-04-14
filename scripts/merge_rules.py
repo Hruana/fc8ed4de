@@ -131,25 +131,6 @@ def merge_nsfw_rules(output_file: str = '../rules/NSFW.list'):
     merge(input_files, output_file, additional_rules)
     logger.info(f'NSFW rules merged to {output_file}')
 
-
-# 合并 LAN 规则
-def merge_lan_rules(output_file: str = '../rules/LAN.list'):
-    # 定义规则 URL
-    input_files = [
-        f'{GLOBAL_MIRROR}/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list',
-        f'{GLOBAL_MIRROR}/GeQ1an/Rules/master/QuantumultX/Filter/LAN.list',
-        f'{GLOBAL_MIRROR}/dler-io/Rules/main/Clash/Provider/LAN.yaml',
-    ]
-    # 额外规则
-    additional_rules = [
-        '# 额外规则',
-        '# 合并规则(LAN)',
-    ]
-    #
-    merge(input_files, output_file, additional_rules)
-    logger.info(f'LAN rules merged to {output_file}')
-
-
 # 合并 Developer 规则
 def merge_developer_rules(output_file: str = '../rules/Developer.list'):
     # 定义规则 URL
@@ -171,5 +152,4 @@ def merge_developer_rules(output_file: str = '../rules/Developer.list'):
 
 if __name__ == '__main__':
     merge_nsfw_rules()
-    merge_lan_rules()
     merge_developer_rules()
