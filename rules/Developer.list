@@ -1,6 +1,7 @@
 # NAME Developer.list 
 # Total: 97 Rules
 # 额外规则
+DOMAIN-SUFFIX,nuwen.net
 # 合并规则(GitHub, Docker, Python, Ubuntu)
 DOMAIN-SUFFIX,aerialline.com
 DOMAIN-SUFFIX,askubuntu.com
