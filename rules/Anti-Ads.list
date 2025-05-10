@@ -68,3 +68,5 @@ DOMAIN-SUFFIX,view.adjust.com
 DOMAIN-SUFFIX,vst.c.appier.net
 DOMAIN-SUFFIX,wv.inner-active.mobi
 DOMAIN-SUFFIX,www.googletagservices-cn.com
+# Malware
+DOMAIN-SUFFIX,mantrabowery.icu
