@@ -125,6 +125,7 @@ def merge_nsfw_rules(output_file: str = '../rules/NSFW.list'):
         'DOMAIN-SUFFIX,anidex.info',
         'DOMAIN-KEYWORD,55comic',
         'DOMAIN-KEYWORD,onlyfans',
+        'DOMAIN-SUFFIX,jcomic.net'
         '# 合并规则(NSFW)',
     ]
     #
