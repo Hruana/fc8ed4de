@@ -145,6 +145,7 @@ def merge_developer_rules(output_file: str = '../rules/Developer.list'):
     additional_rules = [
         '# 额外规则',
         'DOMAIN-SUFFIX,nuwen.net',
+        'DOMAIN-SUFFIX,dartnode.com',
         '# 合并规则(GitHub, Docker, Python, Ubuntu)',
     ]
     #
