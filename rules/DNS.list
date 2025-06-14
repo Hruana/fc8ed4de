@@ -1,0 +1,6 @@
+# NAME DNS.list 
+# Total: 4 Rules
+DOMAIN,doh.pub
+DOMAIN,dns.alidns.com
+DOMAIN,dns.google
+DOMAIN,cloudflare-dns.com
