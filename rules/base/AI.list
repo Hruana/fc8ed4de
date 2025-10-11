@@ -1,0 +1,52 @@
+# ChatGPT其他
+DOMAIN-SUFFIX,chat.com
+
+# LLM竞技场
+DOMAIN-SUFFIX,lmsys.org
+# poe
+DOMAIN-SUFFIX,poe.com
+# cohere
+DOMAIN-KEYWORD,cohere
+# coze
+DOMAIN-SUFFIX,coze.com
+# JetBrains AI
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,grazie.aws.intellij.net
+# KLing可灵
+DOMAIN-SUFFIX,klingai.com
+# Deepseek
+DOMAIN-SUFFIX,deepseek.com
+# SiderAI
+DOMAIN-SUFFIX,sider.ai
+# MistralAI
+DOMAIN-SUFFIX,mistral.ai
+# codeium&windsurf
+DOMAIN-SUFFIX,codeiumdata.com
+DOMAIN-SUFFIX,codeium.com
+# hcompany.ai
+DOMAIN-SUFFIX,hcompany.ai
+DOMAIN-KEYWORD,hcompany
+# CiciAI
+DOMAIN-SUFFIX,cici.com
+DOMAIN-SUFFIX,ciciai.com
+DOMAIN-SUFFIX,ciciaicdn.com
+# trae  + MarsCode Oversea version
+DOMAIN-SUFFIX,trae.ai
+DOMAIN-SUFFIX,byteoversea.com
+# cursor
+DOMAIN-SUFFIX,cursor-cdn.com
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,cursorapi.com
+# Claude
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,Claude.ai
+# X.ai
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+# AugmentCode
+DOMAIN-SUFFIX,augmentcode.com
+# Other AI
+DOMAIN-SUFFIX,heygen.com
+DOMAIN-SUFFIX,rask.ai
+DOMAIN-SUFFIX,maestra.ai
