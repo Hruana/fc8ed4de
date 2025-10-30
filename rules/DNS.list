@@ -1,0 +1,5 @@
+# NAME DNS.list 
+# Total: 3 Rules
+DOMAIN,dns.google
+DOMAIN,cloudflare-dns.com
+DOMAIN,dns11.quad9.net

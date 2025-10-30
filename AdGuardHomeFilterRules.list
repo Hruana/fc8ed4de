@@ -1,0 +1,29 @@
+# NetFlix
+||fast.com^$dnstype=AAAA
+||netflix.com^$dnstype=AAAA
+||netflix.net^$dnstype=AAAA
+||nflxso.net^$dnstype=AAAA
+||nflxext.com^$dnstype=AAAA
+||nflximg.com^$dnstype=AAAA
+||nflximg.net^$dnstype=AAAA
+||nflxvideo.net^$dnstype=AAAA
+||netflixdnstest0.com^$dnstype=AAAA
+||netflixdnstest1.com^$dnstype=AAAA
+||netflixdnstest2.com^$dnstype=AAAA
+||netflixdnstest3.com^$dnstype=AAAA
+||netflixdnstest4.com^$dnstype=AAAA
+||netflixdnstest5.com^$dnstype=AAAA
+||netflixdnstest6.com^$dnstype=AAAA
+||netflixdnstest7.com^$dnstype=AAAA
+||netflixdnstest8.com^$dnstype=AAAA
+||netflixdnstest9.com^$dnstype=AAAA
+# Apple
+@@||mesu.apple.com^$important
+@@||xp.apple.com^$important
+@@||gdmf.apple.com^$important
+||update.netsarangapi.com^$important
+||update.netsarangupdate.com^$important
+||update.netsarang.com^$important
+||up.netsarangupdate.com^$important
+||transact.netsarangapi.com^$important
+||transact.netsarang.com^$important
