@@ -34,7 +34,8 @@ log-level: info
 
 # 外部控制设置
 external-controller: 0.0.0.0:9090  # 外部控制器监听地址
-external-ui: folder               # 外部控制器UI目录
+external-ui: folder               # 外部控制器UI目录 ui
+external-ui-url: "https://github.com/Zephyruso/zashboard/archive/gh-pages.zip"
 secret: ""                        # 外部控制器密码
 
 #------------------------性能调优------------------------#
@@ -207,19 +208,22 @@ sniffer:
 
 #------------------------hosts 配置------------------------#
 hosts:
-  mtalk.google.com: [64.233.188.188, 108.177.97.188, '2404:6800:4008:c07::bc', '2404:6800:4008:c05::bc']
-  alt1-mtalk.google.com: [142.251.186.188, 142.250.141.188, '2607:f8b0:4023:c0b::bc']
-  alt2-mtalk.google.com: [142.250.152.188, 142.251.186.188, 142.250.141.188]
-  alt3-mtalk.google.com: [142.250.157.188, 142.251.186.188, '2404:6800:4008:c13::bc', '2607:f8b0:4001:c56::bc']
-  alt4-mtalk.google.com: [74.125.200.188, 142.250.152.188, 108.177.104.188]
-  alt5-mtalk.google.com: [108.177.98.188, 142.250.157.188, '2607:f8b0:4001:c56::bc', '2607:f8b0:4023:1::bc']
-  alt6-mtalk.google.com: [108.177.98.188, 74.125.200.188, 142.251.186.188]
-  alt7-mtalk.google.com: [142.250.141.188, 142.250.157.188, '2404:6800:4008:c13::bc', '2607:f8b0:4002:c03::bc']
-  alt8-mtalk.google.com: [172.217.197.188, 108.177.98.188, 142.251.186.188]
-  doh.pub: [1.12.12.12, 120.53.53.53, "2402:4e00::"]
-  dns.alidns.com: [223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1]
-  dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
-  cloudflare-dns.com: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
+  mtalk.google.com: [ 64.233.188.188, 108.177.97.188, '2404:6800:4008:c07::bc', '2404:6800:4008:c05::bc' ]
+  alt1-mtalk.google.com: [ 142.251.186.188, 142.250.141.188, '2607:f8b0:4023:c0b::bc' ]
+  alt2-mtalk.google.com: [ 142.250.152.188, 142.251.186.188, 142.250.141.188 ]
+  alt3-mtalk.google.com: [ 142.250.157.188, 142.251.186.188, '2404:6800:4008:c13::bc', '2607:f8b0:4001:c56::bc' ]
+  alt4-mtalk.google.com: [ 74.125.200.188, 142.250.152.188, 108.177.104.188 ]
+  alt5-mtalk.google.com: [ 108.177.98.188, 142.250.157.188, '2607:f8b0:4001:c56::bc', '2607:f8b0:4023:1::bc' ]
+  alt6-mtalk.google.com: [ 108.177.98.188, 74.125.200.188, 142.251.186.188 ]
+  alt7-mtalk.google.com: [ 142.250.141.188, 142.250.157.188, '2404:6800:4008:c13::bc', '2607:f8b0:4002:c03::bc' ]
+  alt8-mtalk.google.com: [ 172.217.197.188, 108.177.98.188, 142.251.186.188 ]
+  cloudflare-dns.com: [ 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001 ]
+  dns.alidns.com: [ 223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1 ]
+  doh.pub: [ 1.12.12.12, 1.12.12.21, 120.53.53.53 ]
+  dns.google: [ 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844 ]
+  dns11.quad9.net: [ 9.9.9.11, 149.112.112.11, 2620:fe::11, 2620:fe::fe:11 ]
+  miwifi.com: [ 192.168.31.1, 127.0.0.1 ]
+  services.googleapis.cn: [ services.googleapis.com ]
 
 #------------------------proxies 配置----------------------#
 proxies: ~
@@ -229,12 +233,12 @@ proxy-groups: ~
 
 #------------------------rule-providers 配置----------------#
 rule-providers:
-  telegramip:
+  fakeip-filter:
     type: http
-    behavior: ipcidr
+    behavior: domain
     format: mrs
-    path: ./rules/telegramip.mrs
-    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/telegramip.mrs"
+    path: ./rules/fakeip-filter.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"
     interval: 86400
 
   private:
@@ -243,6 +247,22 @@ rule-providers:
     format: mrs
     path: ./rules/private.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.mrs"
+    interval: 86400
+
+  trackerslist:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/trackerslist.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/trackerslist.mrs"
+    interval: 86400
+
+  telegramip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./rules/telegramip.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/telegramip.mrs"
     interval: 86400
 
   privateip:
@@ -259,14 +279,6 @@ rule-providers:
     format: mrs
     path: ./rules/bilibili.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/bilibili.mrs"
-    interval: 86400
-
-  fakeip-filter:
-    type: http
-    behavior: domain
-    format: mrs
-    path: ./rules/fakeip-filter.mrs
-    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"
     interval: 86400
 
   cn:
