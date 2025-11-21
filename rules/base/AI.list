@@ -1,0 +1,96 @@
+# ChatGPT其他
+DOMAIN-SUFFIX,chat.com
+
+# LLM竞技场
+DOMAIN-SUFFIX,lmsys.org
+
+# poe
+DOMAIN-SUFFIX,poe.com
+
+# cohere
+DOMAIN-KEYWORD,cohere
+
+# coze
+DOMAIN-SUFFIX,coze.com
+
+# JetBrains AI
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,grazie.aws.intellij.net
+
+# KLing可灵
+DOMAIN-SUFFIX,klingai.com
+
+# Deepseek
+DOMAIN-SUFFIX,deepseek.com
+
+# SiderAI
+DOMAIN-SUFFIX,sider.ai
+
+# MistralAI
+DOMAIN-SUFFIX,mistral.ai
+
+# codeium&windsurf
+DOMAIN-SUFFIX,codeiumdata.com
+DOMAIN-SUFFIX,codeium.com
+
+# hcompany.ai
+DOMAIN-SUFFIX,hcompany.ai
+DOMAIN-KEYWORD,hcompany
+
+# CiciAI
+DOMAIN-SUFFIX,cici.com
+DOMAIN-SUFFIX,ciciai.com
+DOMAIN-SUFFIX,ciciaicdn.com
+
+# trae  + MarsCode Oversea version
+DOMAIN-SUFFIX,trae.ai
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,trae.cn
+
+# Cursor
+DOMAIN-SUFFIX,cursor-cdn.com
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,cursorapi.com
+
+# Anthropic
+# > Claude
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claude.ai.com
+
+# Cloudflare
+# > AI Gateway
+DOMAIN,gateway.ai.cloudflare.com
+
+# X.ai
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+
+# AugmentCode
+DOMAIN-SUFFIX,augmentcode.com
+
+# Other AI
+DOMAIN-SUFFIX,heygen.com
+DOMAIN-SUFFIX,rask.ai
+DOMAIN-SUFFIX,maestra.ai
+DOMAIN-SUFFIX,anannas.ai
+
+# Google Gemini
+DOMAIN,ai.google.dev
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,makersuite.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-KEYWORD,colab
+DOMAIN-KEYWORD,developerprofiles
+DOMAIN-KEYWORD,generativelanguage
