@@ -1,0 +1,325 @@
+#------------------------基础配置------------------------#
+mixed-port: 7890 # 混合端口：HTTP(S)和SOCKS5共用端口
+tcp-concurrent: true # TCP并发：允许并发连接TCP,提高并发性能
+unified-delay: true # 统一延迟：统一显示节点延迟
+allow-lan: false # 局域网连接：允许其他设备经过本机代理
+bind-address: "*" # 监听地址：*表示绑定所有IP地址
+find-process-mode: strict # 进程匹配模式：strict严格,off关闭,always总是
+ipv6: true # IPv6开关：是否启用IPv6支持
+
+# 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint
+# 可选： "chrome","firefox","safari","ios","random","none" options.
+# Utls is currently support TLS transport in TCP/grpc/WS/HTTP for VLESS/Vmess and trojan.
+global-client-fingerprint: chrome
+
+# 全局 UA ,默认 clash.meta
+global-ua: "clash.meta"
+
+# 为 Linux 下的出站连接提供默认流量标记
+routing-mark: 11451
+
+# 运行模式(任选其一):
+# rule: 规则模式 - 根据规则匹配来选择代理
+# global: 全局模式 - 全部流量走代理
+# direct: 直连模式 - 全部流量不走代理
+mode: rule
+
+# 日志等级(按详细程度排序):
+# debug: 调试
+# info: 信息
+# warning: 警告
+# error: 错误
+# silent: 静默
+log-level: info
+
+# 外部控制设置
+external-controller: 0.0.0.0:9090 # 外部控制器监听地址
+external-ui: folder # 外部控制器UI目录 ui
+external-ui-url: "https://github.com/Zephyruso/zashboard/archive/gh-pages.zip"
+secret: "" # 外部控制器密码
+
+#------------------------性能调优------------------------#
+#disable-keep-alive: false    # 禁用Keep-Alive
+tcp-concurrent-users: 64 # TCP并发连接数,根据服务器性能调整,建议值:16-128
+# TCP Keep Alive 的最大空闲时间，单位为秒
+keep-alive-idle: 600
+# 控制 Clash 发出 TCP Keep Alive 包的间隔，单位为秒，减少移动设备耗电问题的临时措施。
+keep-alive-interval: 30
+inbound-tfo: true # 入站TCP Fast Open
+outbound-tfo: true # 出站TCP Fast Open
+# Windows示例
+#interface-name: WLAN   # Windows中的无线网卡名称
+# 或
+#interface-name: 以太网  # Windows中的有线网卡名称
+# macOS示例
+#interface-name: en0    # macOS中通常是Wi-Fi
+# 或
+#interface-name: en1    # macOS中通常是有线网卡
+# Linux示例
+#interface-name: eth0   # Linux中常见的有线网卡名
+# 或
+#interface-name: wlan0  # Linux中常见的无线网卡名
+
+# 连接池配置
+connection-pool-size: 256 # 连接池大小,建议值:128-512
+idle-timeout: 60 # 空闲超时时间(秒)
+
+#------------------------TLS 配置------------------------#
+tls:
+  enable: true # 启用TLS支持
+  skip-cert-verify: false # 是否跳过证书验证
+  alpn: # 应用层协议协商
+    - h2 # HTTP/2
+    - http/1.1 # HTTP/1.1
+  min-version: "1.2" # 最低TLS版本
+  max-version: "1.3" # 最高TLS版本
+  cipher-suites: # 加密套件优先级
+    - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+    - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+    - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+    - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305
+
+#------------------------TUN 配置------------------------#
+tun:
+  enable: false
+  device: MihomoCore
+  stack: mixed # 混合模式: mixed, gvisor,system
+  mtu: 9000
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-detect-interface: true
+
+#------------------------DNS 配置------------------------#
+dns:
+  enable: true # 启用DNS服务器
+  ipv6: true # DNS解析IPv6
+  prefer-h3: false # 优先使用HTTP/3查询
+  use-hosts: true # 使用hosts文件
+  listen: 0.0.0.0:53 # DNS监听地址
+  # Fake-IP配置
+  enhanced-mode: fake-ip # DNS模式: fake-ip或redir-host
+  fake-ip-range: 198.18.0.1/16 # Fake-IP地址段
+  fake-ip-filter: ["+.*"] # Fake-IP过滤清单，当前使用fake-ip伪造redir-host
+  respect-rules: true # dns 连接遵守路由规则，需配置 proxy-server-nameserver
+  # 默认DNS服务器(用于解析其他DNS服务器的域名)
+  #  default-nameserver:
+  #    - 223.5.5.5            # 阿里DNS
+  #    - 119.29.29.29         # 腾讯DNS
+  # 主要DNS服务器
+  nameserver:
+    # 国外DNS服务器
+    - https://dns.google/dns-query # Google DOH
+    - https://cloudflare-dns.com/dns-query # Cloudflare DOH
+  # DNS服务器分流策略
+  nameserver-policy:
+    dns.alidns.com: quic://223.5.5.5:853
+    doh.pub: https://1.12.12.12/dns-query
+    "www.msftconnecttest.com":
+      - 119.29.29.29
+      - 223.5.5.5
+    "dns.msftncsi.com":
+      - 119.29.29.29
+      - 223.5.5.5
+    "www.msftncsi.com":
+      - 119.29.29.29
+      - 223.5.5.5
+    rule-set:bilibili,cn,private:
+      # 国内DNS服务器(可选运营商DNS)
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+  # 代理节点域名解析服务器
+  proxy-server-nameserver:
+    # 国内DNS服务器
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  # 用于direct出口域名解析的 DNS 服务器，如果不填则遵循nameserver-policy、nameserver和fallback的配置
+  direct-nameserver:
+    # 国内DNS服务器
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+#------------------------域名嗅探配置------------------------#
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+      override-destination: true
+    QUIC:
+      ports: [443, 8443]
+      override-destination: true
+  force-domain:
+    - +.v2ex.com
+    - +.google.com
+  skip-domain:
+    - Mijia Cloud
+    - dlg.io.mi.com
+    - +.apple.com
+    - +.rc.sunlogin.net
+    - time.windows.com
+    - courier.push.apple.com
+    - rbsxbxp-mim.vivox.com
+    - rbsxbxp.www.vivox.com
+    - rbsxbxp-ws.vivox.com
+    - rbspsxp.www.vivox.com
+    - rbspsxp-mim.vivox.com
+    - rbspsxp-ws.vivox.com
+    - rbswxp.www.vivox.com
+    - rbswxp-mim.vivox.com
+    - disp-rbspsp-5-1.vivox.com
+    - disp-rbsxbp-5-1.vivox.com
+    - proxy.rbsxbp.vivox.com
+    - proxy.rbspsp.vivox.com
+    - proxy.rbswp.vivox.com
+    - rbswp.vivox.com
+    - rbsxbp.vivox.com
+    - rbspsp.vivox.com
+    - rbspsp.www.vivox.com
+    - rbswp.www.vivox.com
+    - rbsxbp.www.vivox.com
+    - rbsxbxp.vivox.com
+    - rbspsxp.vivox.com
+    - rbswxp.vivox.com
+    - basic-static-server.infinitynewtab.com
+  skip-dst-address:
+    - 223.5.5.5/32
+    - 223.6.6.6/32
+    - 119.29.29.29/32
+    - 1.1.1.1/32
+    - 8.8.8.8/32
+    - 101.101.101.101/32
+    - 110.242.69.63/32
+    - 221.194.154.187/32
+    - 36.248.45.62/32
+    - 2001:4860:4860::8888/128
+    - 2001:4860:4860::8844/128
+
+#------------------------hosts 配置------------------------#
+hosts:
+  doh.pub: [1.12.12.12, 120.53.53.53, 2402:4e00::]
+  dns.alidns.com: [223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1]
+  dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
+  dns11.quad9.net: [9.9.9.11, 149.112.112.11, 2620:fe::11, 2620:fe::fe:11]
+  cloudflare-dns.com:
+    [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
+  miwifi.com: [192.168.31.1, 127.0.0.1, 10.10.10.1]
+  services.googleapis.cn: [services.googleapis.com]
+
+#------------------------proxies 配置----------------------#
+proxies: ~
+
+#------------------------proxy-groups 配置-----------------#
+proxy-groups: ~
+
+#------------------------rule-providers 配置----------------#
+rule-providers:
+  fakeip-filter:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/fakeip-filter.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/private.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.mrs"
+    interval: 86400
+
+  trackerslist:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/trackerslist.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/trackerslist.mrs"
+    interval: 86400
+
+  telegramip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./ruleset/telegramip.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/telegramip.mrs"
+    interval: 86400
+
+  privateip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./ruleset/privateip.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/privateip.mrs"
+    interval: 86400
+
+  bilibili:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/bilibili.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/bilibili.mrs"
+    interval: 86400
+
+  cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/cn.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.mrs"
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/proxy.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.mrs"
+    interval: 86400
+
+  networktest:
+    type: http
+    behavior: classical
+    format: text
+    path: ./ruleset/networktest.list
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list"
+    interval: 86400
+
+  gamesip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./ruleset/gamesip.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/gamesip.mrs"
+    interval: 86400
+
+  games-cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/games-cn.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.mrs"
+    interval: 86400
+
+  games:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/games.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games.mrs"
+    interval: 86400
+
+#------------------------rules 配置-------------------------#
+rules: ~

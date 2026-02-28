@@ -1,0 +1,4 @@
+# 限定US
+# 合并/AntonyCyrus/Rule/main/Clash/USMedia.list
+DOMAIN-SUFFIX,cem.va.gov
+DOMAIN-SUFFIX,sheerid.com

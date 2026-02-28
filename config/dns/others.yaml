@@ -1,0 +1,23 @@
+#用于编写自定义的锚点、入站、proxy-providers、sub-rules、rule-set、script等功能
+#可参考 https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml 或 https://lancellc.gitbook.io/clash/clash-config-file/an-example-configuration-file
+#此处内容会被添加在配置文件的“proxy-group：”模块的末尾与“rules：”模块之前的位置
+#例如：
+#proxy-providers:
+#rule-providers:
+#sub-rules:
+#tunnels:
+#script:
+#listeners:
+
+geodata-mode: true
+
+# Geo 数据库下载地址(private,cn,proxy,microsoft-cn,apple-cn,google-cn,games-cn)
+# 源地址 https://github.com/MetaCubeX/meta-rules-dat
+# 可以更换镜像站但不要更换其他数据库，可能导致无法启动
+geox-url:
+  geosite: 'https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/geosite-all-lite.dat'
+  geoip: 'https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/geoip.dat'
+  mmdb: 'https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/Country.mmdb'
+
+geo-auto-update: true # 是否自动更新 geodata
+geo-update-interval: 168 # 更新间隔，单位：小时

@@ -1,0 +1,26 @@
+# NAME AcademicProxy.list 
+# Total: 24 Rules
+DOMAIN-KEYWORD,sci-hub
+DOMAIN-SUFFIX,sci-hub.cc
+DOMAIN-SUFFIX,sci-hub.la
+DOMAIN-SUFFIX,sci-hub.hk
+DOMAIN-SUFFIX,scopus.com
+DOMAIN-KEYWORD,sciencedirect
+DOMAIN-SUFFIX,sciencedirect.com
+DOMAIN-KEYWORD,elsevier
+DOMAIN-KEYWORD,deepdyve
+DOMAIN-KEYWORD,els-cdn
+DOMAIN-SUFFIX,softhead-citavi.com
+DOMAIN-KEYWORD,softhead-citavi
+DOMAIN-KEYWORD,nccn.org
+DOMAIN-SUFFIX,bestpractice.bmj.com
+DOMAIN-SUFFIX,seer.cancer.gov
+DOMAIN-SUFFIX,inoreader.com
+DOMAIN-SUFFIX,gdc.cancer.gov
+DOMAIN-SUFFIX,app.mrbase.org
+DOMAIN-KEYWORD,mrbase.org
+DOMAIN-KEYWORD,voxelx.com
+DOMAIN-KEYWORD,seerstat.imsweb.com
+DOMAIN-SUFFIX,ieee.atyponrex.com
+DOMAIN-SUFFIX,authorgateway.ieee.org
+DOMAIN-SUFFIX,atyponrex.com
