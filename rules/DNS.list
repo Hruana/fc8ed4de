@@ -1,0 +1,18 @@
+# NAME DNS.list 
+# Total: 16 Rules
+DOMAIN-SUFFIX,cloudflare-dns.com
+DOMAIN-SUFFIX,dns.google
+DOMAIN-SUFFIX,dns.quad9.net
+DOMAIN-SUFFIX,dns.umbrella.com
+DOMAIN-SUFFIX,dns11.quad9.net
+DOMAIN-SUFFIX,doh.dns.sb
+DOMAIN-SUFFIX,doh.opendns.com
+DOMAIN-SUFFIX,dot.sb
+DOMAIN-SUFFIX,hk-hkg.doh.sb
+IP-CIDR,1.0.0.1/32
+IP-CIDR,1.1.1.1/32
+IP-CIDR,185.222.222.222/32
+IP-CIDR,208.67.220.220/32
+IP-CIDR,208.67.222.222/32
+IP-CIDR,8.8.4.4/32
+IP-CIDR,8.8.8.8/32
