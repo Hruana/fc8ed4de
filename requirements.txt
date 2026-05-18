@@ -1,0 +1,5 @@
+tldextract
+requests
+netaddr
+loguru
+tqdm

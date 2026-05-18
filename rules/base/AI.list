@@ -1,0 +1,202 @@
+# LLM竞技场
+DOMAIN-SUFFIX,lmsys.org
+
+# poe
+DOMAIN-SUFFIX,poe.com
+
+# cohere
+DOMAIN-KEYWORD,cohere
+
+# coze
+DOMAIN-SUFFIX,coze.com
+
+# JetBrains AI
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,grazie.aws.intellij.net
+DOMAIN-SUFFIX,jetbrains.ai
+
+# KLing可灵
+DOMAIN-SUFFIX,klingai.com
+
+# Deepseek
+DOMAIN-SUFFIX,deepseek.com
+
+# SiderAI
+DOMAIN-SUFFIX,sider.ai
+
+# MistralAI
+DOMAIN-SUFFIX,mistral.ai
+
+# codeium&windsurf
+DOMAIN-SUFFIX,codeiumdata.com
+DOMAIN-SUFFIX,codeium.com
+
+# hcompany.ai
+DOMAIN-SUFFIX,hcompany.ai
+DOMAIN-KEYWORD,hcompany
+
+# CiciAI
+DOMAIN-SUFFIX,cici.com
+DOMAIN-SUFFIX,ciciai.com
+DOMAIN-SUFFIX,ciciaicdn.com
+
+# trae  + MarsCode Oversea version
+DOMAIN-SUFFIX,trae.ai
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,trae.cn
+
+# Cursor
+DOMAIN-SUFFIX,cursor-cdn.com
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,cursorapi.com
+
+# Anthropic / Claude
+DOMAIN-KEYWORD,claude
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claude.ai.com
+
+# Cloudflare / AI Gateway
+DOMAIN-SUFFIX,gateway.ai.cloudflare.com
+
+# X.ai
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.x.com
+DOMAIN-SUFFIX,groq.com
+
+# AugmentCode
+DOMAIN-SUFFIX,augmentcode.com
+
+# OpenAI
+DOMAIN-SUFFIX,chat.com
+DOMAIN-KEYWORD,openai
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN-SUFFIX,openaicom.imgix.net
+DOMAIN-SUFFIX,browser-intake-datadoghq.com
+
+# Google Gemini
+DOMAIN-KEYWORD,colab
+DOMAIN-KEYWORD,developerprofiles
+DOMAIN-KEYWORD,generativelanguage
+DOMAIN,ai.google.dev
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,makersuite.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,jules.google
+DOMAIN-SUFFIX,jules.google.com
+DOMAIN-SUFFIX,labs.google
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,geller-pa.googleapis.com
+DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com
+DOMAIN-SUFFIX,aida.googleapis.com
+DOMAIN-SUFFIX,aisandbox-pa.googleapis.com
+DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
+DOMAIN,alkalicore-pa.clients6.google.com
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,gemini.google
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN-SUFFIX,notebooklm.google.com
+
+# Google Antigravity
+DOMAIN,api.antigravity.google.com
+DOMAIN-SUFFIX,antigravity.goog
+DOMAIN-SUFFIX,antigravity-unleash.goog
+DOMAIN-SUFFIX,antigravity-unleash.google
+DOMAIN-SUFFIX,antigravity.google
+DOMAIN-KEYWORD,antigravity
+DOMAIN,antigravity-unleash.goog
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN,lh3.googleusercontent.com
+DOMAIN,daily-cloudcode-pa.sandbox.googleapis.com
+DOMAIN-SUFFIX,us-central1.run.app
+DOMAIN-SUFFIX,com.google.antigravity
+DOMAIN-SUFFIX,com.google.antigravity.helper
+
+# Microsoft Copilot / Sydney
+DOMAIN,sydney.bing.com
+DOMAIN,copilot-proxy.githubusercontent.com
+DOMAIN,api.githubcopilot.com
+DOMAIN-SUFFIX,copilot.cloud.microsoft
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,ai.azure.com
+
+# Brave 浏览器相关
+DOMAIN-SUFFIX,brave.com
+DOMAIN-SUFFIX,bravesoftware.com
+
+# Together / 协作类
+DOMAIN-SUFFIX,together.ai
+DOMAIN-SUFFIX,together.xyz
+
+# Other AI
+DOMAIN-SUFFIX,heygen.com
+DOMAIN-SUFFIX,rask.ai
+DOMAIN-SUFFIX,maestra.ai
+DOMAIN-SUFFIX,anannas.ai
+DOMAIN,api.together.xyz
+DOMAIN,pplx-res.cloudinary.com
+DOMAIN,servd-anthropic-website.b-cdn.net
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,cerebras.ai
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,chutes.ai
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,clipdrop.co
+DOMAIN-SUFFIX,coderabbit.ai
+DOMAIN-SUFFIX,coderabbit.gallery.vsassets.io
+DOMAIN-SUFFIX,cohere.ai
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,comfy.org
+DOMAIN-SUFFIX,comfyci.org
+DOMAIN-SUFFIX,comfyregistry.org
+DOMAIN-SUFFIX,devin.ai
+DOMAIN-SUFFIX,diabrowser.com
+DOMAIN-SUFFIX,dify.ai
+DOMAIN-SUFFIX,dola.com
+DOMAIN-SUFFIX,duck.ai
+DOMAIN-SUFFIX,elevenlabs.com
+DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,hf.co
+DOMAIN-SUFFIX,hf.space
+DOMAIN-SUFFIX,host.livekit.cloud
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,jasper.ai
+DOMAIN-SUFFIX,kiro.dev
+DOMAIN-SUFFIX,marscode.com
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openart.ai
+DOMAIN-SUFFIX,openrouter.ai
+DOMAIN-SUFFIX,oystermercury.top
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,perplexity.com
+DOMAIN-SUFFIX,poecdn.net
+DOMAIN-SUFFIX,pplx.ai
+DOMAIN-SUFFIX,notesnook.com
+DOMAIN-SUFFIX,streetwriters.co
+DOMAIN-SUFFIX,turn.livekit.cloud
