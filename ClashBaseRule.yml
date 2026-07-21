@@ -69,8 +69,7 @@ geox-url: # 自定义 GEO 文件下载地址
   # geoip: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-geodata/geoip.dat"
   # mmdb: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-geodata/Country.mmdb"
   # asn: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-geodata/Country-ASN.mmdb"
-  # asn: "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
-  asn: "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-geodata/Country-ASN.mmdb"
+  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
 
 #------------------------TLS 配置------------------------#
 tls:
