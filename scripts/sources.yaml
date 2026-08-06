@@ -1,0 +1,113 @@
+options:
+  VirtualCurrency.list:
+    - https://raw.githubusercontent.com/iBlack16/iBlack/refs/heads/main/clash/xunibi.list
+    - https://raw.githubusercontent.com/yiyule10/Passwall/main/Clash/virtual%20currency.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Binance/Binance.list
+    - https://raw.githubusercontent.com/mexiaow/ACL4SSR/main/Clash/Ruleset/VirtualCurrency.list
+  NSFW.list:
+    - https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Porn.list
+    - https://raw.githubusercontent.com/devswork/my-subconverter/master/rules/porn.list
+    - https://raw.githubusercontent.com/sounfury/sounfury-Clash_rules/main/rule/sexy.list
+  Developer.list:
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Docker/Docker.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Python/Python.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Ubuntu/Ubuntu.list
+    - https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Developer.list
+  AI.list:
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
+    - https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/refs/heads/main/rules/surge/all.list
+  Anti-Ads.list: []
+  DNS.list: []
+  Download.list: []
+  Inside.list: []
+  Outside.list: []
+  TravelUS.list: []
+  TravelHK.list: []
+  Media.list:
+    - https://raw.githubusercontent.com/AntonyCyrus/Rule/main/Clash/Music.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.list
+  LimitHK.list:
+    - https://raw.githubusercontent.com/AntonyCyrus/Rule/main/Clash/HKMedia.list
+  LimitTW.list:
+    - https://raw.githubusercontent.com/AntonyCyrus/Rule/main/Clash/TWMedia.list
+  LimitJP.list:
+    - https://raw.githubusercontent.com/AntonyCyrus/Rule/main/Clash/JPMedia.list
+  LimitUS.list:
+    - https://raw.githubusercontent.com/AntonyCyrus/Rule/main/Clash/USMedia.list
+  LimitKR.list:
+    - https://raw.githubusercontent.com/AntonyCyrus/Rule/main/Clash/KRMedia.list
+  LimitIN.list:
+    - https://raw.githubusercontent.com/AntonyCyrus/Rule/main/Clash/INMedia.list
+  LimitGB.list:
+    - https://raw.githubusercontent.com/AntonyCyrus/Rule/main/Clash/GBMedia.list
+  Stream.list:
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list
+    - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrimeVideo/PrimeVideo.list
+  AcademicDirect.list: []
+  AcademicProxy.list: []
+  SocialMedia.list:
+    - https://raw.githubusercontent.com/AntonyCyrus/Rule/main/Clash/SocialMedia.list
+
+blacklists:
+  AI.list:
+    - DOMAIN-SUFFIX,githubcopilot.com
+    - DOMAIN,copilot-proxy.githubusercontent.com
+    - DOMAIN,copilot-workspace.githubnext.com
+    - DOMAIN,copilotprodattachments.blob.core.windows.net
+  SocialMedia.list:
+    - DOMAIN-SUFFIX,grok.com
+    - DOMAIN-SUFFIX,askubuntu.com
+    - DOMAIN-SUFFIX,stackoverflow.com
+  VirtualCurrency.list:
+    - DOMAIN-SUFFIX,cloudfront.net
+  LimitHK.list:
+    - DOMAIN-SUFFIX,segment.io
+  Media.list:
+    - DOMAIN-SUFFIX,trae.ai
+    - DOMAIN-SUFFIX,marscode.com
+    - DOMAIN-SUFFIX,byteoversea.com
+  Developer.list:
+    - DOMAIN-SUFFIX,reddit.com
+    - DOMAIN-SUFFIX,sourcegraph.com
+  LimitKR.list:
+    - PROCESS-NAME,com.linecorp.linetv
+    - DOMAIN-SUFFIX,line-cdn.net
+    - DOMAIN-SUFFIX,chocotv.com.tw
+    - DOMAIN-SUFFIX,linetv.tw
+    - DOMAIN,d17lx9ucc6k9fc.cloudfront.net
+    - DOMAIN-SUFFIX,line-scdn.net
+    - IP-CIDR,147.92.128.0/17
+    - DOMAIN-SUFFIX,line.me
+    - DOMAIN-SUFFIX,linecorp.com
+    - IP-CIDR,203.174.66.64/26
+    - DOMAIN-SUFFIX,naver.jp
+    - IP-CIDR,203.104.103.0/24
+    - IP-CIDR,119.235.236.0/23
+    - IP-CIDR,125.6.190.0/24
+    - IP-CIDR,119.235.235.0/24
+    - DOMAIN-SUFFIX,lin.ee
+    - DOMAIN-SUFFIX,line-apps.com
+    - IP-CIDR,203.174.77.0/24
+    - DOMAIN-SUFFIX,nhncorp.jp
+  LimitUS.list:
+    - DOMAIN-SUFFIX,watchespn.com
+    - DOMAIN-SUFFIX,espn.net
+    - DOMAIN-SUFFIX,espn.com
+    - DOMAIN-SUFFIX,espn.co.uk
+    - DOMAIN-SUFFIX,dtci.co
+    - DOMAIN-SUFFIX,dtci.technology
+    - DOMAIN-SUFFIX,espnqa.com
+    - DOMAIN-SUFFIX,espncdn.com
+  NSFW.list:
+    - DOMAIN-SUFFIX,instagram.com
+    - DOMAIN-SUFFIX,facebook.com
+  LimitTW.list:
+    - DOMAIN-SUFFIX,line-cdn.net
+    - DOMAIN-SUFFIX,line-scdn.net
+    - DOMAIN-SUFFIX,gvt1.com
