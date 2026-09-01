@@ -1,0 +1,36 @@
+name: Update Rules
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/**'
+      - 'scripts/**'
+      - 'rules/**'
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '0 */1 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Update Rules
+        run: |
+          pip install -r requirements.txt
+          cd scripts
+          python merge_rules.py
+
+      - name: Reset Main Branch
+        run: |
+          git config --local user.email "120722148+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git checkout --orphan temp_branch
+          git add -A
+          git commit -m "Init"
+          git push --force origin temp_branch:main

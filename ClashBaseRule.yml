@@ -1,0 +1,160 @@
+mixed-port: 7890
+redir-port: 7892
+tproxy-port: 7893
+authentication: [""]
+allow-lan: true
+mode: Rule
+log-level: info
+ipv6: true
+external-controller: :9999
+external-ui: ui
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip"
+# external-ui-url: "https://github.com/Zephyruso/zashboard/archive/gh-pages.zip"
+secret:
+tun: {enable: true, stack: system, device: utun, auto-route: false, auto-detect-interface: false}
+sniffer: {enable: true, parse-pure-ip: true, skip-domain: ['+.push.apple.com', 'Mijia Cloud'], sniff: {http: {ports: [80, 8080-8880], override-destination: true}, tls: {ports: [443, 8443]}, quic: {ports: [443, 8443]}}}
+
+routing-mark: 7894
+unified-delay: true
+tcp-concurrent: true
+profile: {store-selected: true, store-fake-ip: true}
+
+# -------------------------hosts settings------------------------#
+hosts:
+  dns.alidns.com: [223.5.5.5, 223.6.6.6, '2400:3200::1', '2400:3200:baba::1']
+  doh.pub: [1.12.12.12, 120.53.53.53]
+  dns.google: [8.8.8.8, 8.8.4.4, '2001:4860:4860::8888', '2001:4860:4860::8844']
+  dns11.quad9.net: [9.9.9.11, 149.112.112.11, '2620:fe::11', '2620:fe::fe:11']
+  cloudflare-dns.com: [1.1.1.1, 1.0.0.1, '2606:4700:4700::1111', '2606:4700:4700::1001']
+  miwifi.com: [127.0.0.1, 10.10.10.1, 192.168.31.1]
+  services.googleapis.cn: [services.googleapis.com]
+
+#------------------------dns settings----------------------#
+dns:
+  enable: true
+  ipv6: true
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.0/15
+  fake-ip-range6: fc00::/16
+  fake-ip-filter-mode: rule
+  fake-ip-filter:
+    - RULE-SET,fakeip-filter,real-ip
+    - RULE-SET,bilibili,real-ip
+    - RULE-SET,proxy,fake-ip
+    - RULE-SET,cn,real-ip
+    - MATCH,real-ip
+  respect-rules: true
+  default-nameserver:
+    - https://223.6.6.6/dns-query
+    - https://1.12.12.12/dns-query
+  nameserver:
+    # It is recommended to set `ecs` to the IP segment of the default DNS assigned by the current broadband operator
+    - 'https://dns.google/dns-query#ecs=211.137.58.0/24&ecs-override=true'
+    - 'https://dns11.quad9.net/dns-query#ecs=211.137.58.0/24&ecs-override=true'
+  proxy-server-nameserver: &cn-dns
+    - quic://dns.alidns.com:853
+    - https://doh.pub/dns-query
+  direct-nameserver: *cn-dns
+  direct-nameserver-follow-policy: true
+  nameserver-policy:
+    'rule-set:fakeip-filter,bilibili,cn': *cn-dns
+
+#------------------------proxies settings----------------------#
+proxies: ~
+
+#------------------------proxy-groups settings-----------------#
+proxy-groups: ~
+
+#------------------------rule-providers settings----------------#
+rule-providers:
+  fakeip-filter:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/fakeip-filter.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/private.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.mrs"
+    interval: 86400
+
+  trackerslist:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/trackerslist.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/trackerslist.mrs"
+    interval: 86400
+
+  telegramip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./ruleset/telegramip.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/telegramip.mrs"
+    interval: 86400
+
+  privateip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./ruleset/privateip.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/privateip.mrs"
+    interval: 86400
+
+  bilibili:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/bilibili.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/bilibili.mrs"
+    interval: 86400
+
+  cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/cn.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.mrs"
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/proxy.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.mrs"
+    interval: 86400
+
+  networktest:
+    type: http
+    behavior: classical
+    format: text
+    path: ./ruleset/networktest.list
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list"
+    interval: 86400
+
+  games-cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/games-cn.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.mrs"
+    interval: 86400
+
+  games:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/games.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games.mrs"
+    interval: 86400
+
+#------------------------rules settings-------------------------#
+rules: ~

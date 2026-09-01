@@ -1,0 +1,40 @@
+# docs: https://proxy-tutorials.dustinwin.us.kg/posts/dnsnoleaks-mihomo-ruleset/
+
+hosts:
+  cloudflare-dns.com: [ 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001 ]
+  dns.alidns.com: [ 223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1 ]
+  doh.pub: [ 1.12.12.12, 1.12.12.21, 120.53.53.53 ]
+  dns.google: [ 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844 ]
+  dns11.quad9.net: [ 9.9.9.11, 149.112.112.11, 2620:fe::11, 2620:fe::fe:11 ]
+  miwifi.com: [ 192.168.31.1, 127.0.0.1 ]
+  services.googleapis.cn: [ services.googleapis.com ]
+
+dns:
+  enable: true
+  ipv6: true
+  # prefer-h3: false
+  # use-hosts: true
+  # use-system-hosts: true
+  listen: 0.0.0.0:1053
+  fake-ip-range: 28.0.0.1/8
+  enhanced-mode: fake-ip
+  fake-ip-filter: [ '+.*' ]
+  # fake-ip-filter: ['rule-set:fakeip-filter,cn']
+  respect-rules: true
+  nameserver:
+    # 推荐将 `ecs` 设置为当前网络的公网 IP 段
+    # - 'https://dns11.quad9.net/dns-query#ecs=202.103.17.0/24'
+    - 'https://cloudflare-dns.com/dns-query#ecs=202.103.17.0/24'
+    - 'https://dns.google/dns-query#ecs=202.103.17.0/24'
+  nameserver-policy:
+    rule-set:bilibili,cn:
+      - 推荐运营商dns v4
+      - 推荐运营商dns v6
+  proxy-server-nameserver:
+    # - https://dns.alidns.com/dns-query
+    - quic://dns.alidns.com:853
+    - https://doh.pub/dns-query
+  direct-nameserver:
+    # - https://dns.alidns.com/dns-query
+    - quic://dns.alidns.com:853
+    - https://doh.pub/dns-query
